@@ -1,0 +1,150 @@
+.tab-set {
+    margin-bottom: 30px;
+    &:after {
+        display: block;
+        font-size: 0;
+    }
+    > ul.tabs {
+        padding: 0;
+        border: 1px solid #333;
+        list-style: none;
+        > li {
+            display: inline-block;
+            padding: 6px 20px;
+            -webkit-transition: background 1s;
+            -moz-transition: background 1s;
+            -o-transition: background 1s;
+            transition: background 1s;
+            text-align: center;
+            > a {
+                &:link,
+                &:visited,
+                &:active {
+                    font-size: 14px;
+                    color: #333;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            &:first-of-type {
+                border-left: none;
+            }
+
+            &.on {
+                background: #333;
+                a {
+                    &:link,
+                    &:visited,
+                    &:active {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        &.justify {
+            display: table;
+            width: 100%;
+            >li {
+                display: table-cell;
+                width: auto;
+                text-align: center;
+            }
+        }
+
+        &:after {
+            display: block;
+            font-size: 0;
+        }
+    }
+    &.center {
+        text-align: center;
+        margin-bottom: 50px;
+        ul.tabs {
+            display: inline-block;
+            overflow: hidden;
+            width: auto;
+            margin: auto auto 50px;
+            >li {
+                display: inline-block;
+                width: auto;
+                float: left;
+                margin-bottom: 0;
+                margin-right: 1px;
+            }
+        }
+        div.tab-content {
+            text-align: left;
+            border-top: solid 1px rgba(255, 255, 255, .2);
+            padding-top: 30px;
+        }
+    }
+
+    &.left {
+        .tab-content {
+            display: block;
+            float: left;
+            min-height: 300px;
+        }
+        > ul.tabs {
+            display: block;
+            float: left;
+            min-height: 300px;
+            width: 30%;
+            border: none;
+            > li {
+                display: block;
+                text-align: left;
+                width: auto;
+                padding: 10px;
+                border-left: none;
+                border-right: solid 1px #fff;
+            }
+        }
+        > .tab-content {
+            width: 60%;
+            margin-left: 5%;
+        }
+    }
+}
+
+
+
+/* STYLE THE TABSET */
+/*
+.tab-set {
+    > ul.tabs {
+        border: none;
+        > li {
+            border-bottom: solid 1px rgba(0,0,0,0.1);
+            background: none;
+         
+            > &.on {
+                > a {
+                       font-weight: 500;
+                }
+            }
+        }
+    }
+}
+*/
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+    div.tab-set {
+        padding: 0;
+        margin: 0;
+    }
+    div.tab-set.center {
+        ul.tabs {
+            display: block;
+            width: 100%;
+            >li {
+                display: block;
+                width: 100%;
+                float: none;
+            }
+        }
+    }
+}
