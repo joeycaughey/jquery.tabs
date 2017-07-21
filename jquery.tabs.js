@@ -5,11 +5,11 @@ $(document).ready(function() {
 
 function init_tabsets() {
 	
-	$("div.tab-set").each(function(i, tabset) { 
+	$(".tab-set").each(function(i, tabset) { 
 		var hash = false;
 		var tabset = $(tabset);
 
-		$("div.tab-content > div", tabset).hide();
+		$(".tab-content > *", tabset).hide();
 
 		$("ul.tabs > li", tabset).each(function(i, obj) {
 			if ($(obj).children("a").data("hash") == window.location.hash) {
@@ -27,9 +27,9 @@ function init_tabsets() {
 
 			var active_index = $(this).index();
 
-			$("div.tab-content > div", tabset).hide();
+			$(".tab-content > *", tabset).hide();
 
-			$("div.tab-content > div", tabset).eq(active_index).show();
+			$(".tab-content > *", tabset).eq(active_index).show();
 			/*
 			try {
 				ga('send', {
