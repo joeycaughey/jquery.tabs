@@ -41,7 +41,7 @@ function init_tabsets() {
 
 		});
 
-		$("ul.tabs > li:visible:first", tabset).click();
+		$("ul.tabs > li", tabset).eq(0).trigger("click");
 
 		$("a[rel=next-tab]", tabset).on("click", function() {
 			$("ul.tabs > li.on", tabset).next().click();
